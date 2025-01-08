@@ -12,7 +12,7 @@ let currentPlayer = "X"; //Показывает, кто в данный моме
 let statusBoard = []; //Игровое поле
 let gameActive = true;
 let boardSize = 3; //По умолчанию размер поля 3
-let winLength = 3; //По умолчанию длина выйгрышкой комбинации - 3
+let winLength = 3; //По умолчанию длина выигрышкой комбинации - 3
 
 //Перезапуск игры
 function newGame() {
@@ -41,7 +41,7 @@ function newGame() {
   gameActive = true;
 }
 
-//Проверка, есть ли выйгрышная комбинация
+//Проверка, есть ли выигрышная комбинация
 function checkWinner() {
   let maxStrike = 0;
 
@@ -103,7 +103,7 @@ function checkWinner() {
 
   //Выводим победителя и завершаем игру(если есть)
   if (maxStrike >= winLength) {
-    statusText.textContent = `${currentPlayer} выйграл!`;
+    statusText.textContent = `${currentPlayer} выиграл!`;
     gameActive = false;
     return;
   }
@@ -147,9 +147,9 @@ createButton.addEventListener("click", () => {
   } else if (boardSize > 9) {
     alert("Размер доски не может быть больше 9");
   } else if (winLength < 3) {
-    alert("Длина выйгрышной комбинации не может быть меньше 3");
+    alert("Длина выигрышной комбинации не может быть меньше 3");
   } else if (winLength > boardSize) {
-    alert("Длина выйгрышной комбинации не может быть больше размера доски");
+    alert("Длина выигрышной комбинации не может быть больше размера доски");
   } else {
     newGame(); //Если всё ок, создаём поле
   }
