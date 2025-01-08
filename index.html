@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="light-theme">
+    <header>
+      <button id="theme-btn">☀︎</button>
+      <h1>Крестики-нолики</h1>
+      <div class="settings">
+        <label for="board-size">Размер доски:</label>
+        <input id="board-size" type="number" min="3" max="9" value="3" />
+        <br />
+        <label for="win-len">Длина выйгрышной комбинации:</label>
+        <input id="win-len" type="number" min="3" max="9" value="3" />
+        <br />
+        <label for="first-player">Первый игрок:</label>
+        <select id="first-player">
+          <option value="X">X</option>
+          <option value="O">O</option>
+        </select>
+        <br />
+        <button id="create-board">Создать поле</button>
+      </div>
+    </header>
+
+    <main>
+      <div class="board"><!--Контейнер для игрового поля--></div>
+
+      <div id="status">
+        <p id="status-text"></p>
+      </div>
+
+      <button id="reset-btn">Рестарт</button>
+    </main>
+
+    <footer>
+      <p>Разработчик сайта: Ванеева Наталья</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

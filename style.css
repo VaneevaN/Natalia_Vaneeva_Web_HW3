@@ -1,0 +1,95 @@
+body {
+  font-family: cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #3d3d3f;
+  color: #f5e6c5;
+  text-align: center;
+}
+
+body.light-theme {
+  /* Светлая тема */
+  background-color: #f5e6c5;
+  color: #3d3d3f;
+}
+
+.container {
+  text-align: center;
+}
+
+.settings {
+  /* Отделение настроек доски */
+  margin-bottom: 20px;
+}
+
+.settings input,
+.settings select {
+  /* Стиль для полей ввода*/
+  margin-right: 10px;
+  color: #fe6e1f;
+  background-color: #f5e6c5;
+  font-weight: 700;
+}
+
+.field {
+  /* Контейнер для игрового поля */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: grid;
+  gap: 5px; /* Расстояние между клеточками */
+}
+
+.cell {
+  /* Стиль для клеточек */
+  width: 50px;
+  height: 50px;
+  background-color: #fe6e1f;
+  border: 1px solid #ff4d00;
+  color: black;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: #fe6d1f4f 3px 3px;
+}
+
+.cell:hover {
+  /* Эффект при наведении на клетку */
+  background-color: #ff4d00;
+}
+
+.status- {
+  /* Стиль для отображения статуса */
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+button {
+  /* Стиль для кнопок */
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 2px solid;
+  border-radius: 5px;
+  color: #f5e6c5;
+  background-color: #2b2b2c;
+}
+
+button:hover {
+  /* Эффект при наведении на клетку */
+  background-color: #ff4d00;
+}
+
+#create-board {
+  /* Кнопка создания игрового поля */
+  margin: 10px 0px 0px 0px;
+}
