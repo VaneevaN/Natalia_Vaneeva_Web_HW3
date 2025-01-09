@@ -140,17 +140,19 @@ function clickHandlerForCell(event) {
 
 //Обработчик событий
 createButton.addEventListener("click", () => {
-  boardSize = parseInt(size.value);
-  winLength = parseInt(len.value);
-  if (boardSize < 3) {
+  newSize = parseInt(size.value);
+  newLen = parseInt(len.value);
+  if (newSize < 3) {
     alert("Размер доски не может быть меньше 3");
-  } else if (boardSize > 9) {
+  } else if (newSize > 9) {
     alert("Размер доски не может быть больше 9");
-  } else if (winLength < 3) {
+  } else if (newLen < 3) {
     alert("Длина выигрышной комбинации не может быть меньше 3");
-  } else if (winLength > boardSize) {
+  } else if (newLen > newSize) {
     alert("Длина выигрышной комбинации не может быть больше размера доски");
   } else {
+    boardSize = newSize;
+    winLength = newLen;
     newGame(); //Если всё ок, создаём поле
   }
 });
